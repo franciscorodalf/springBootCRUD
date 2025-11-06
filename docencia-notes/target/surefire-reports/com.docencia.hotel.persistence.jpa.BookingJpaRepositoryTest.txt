@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.docencia.hotel.persistence.jpa.BookingJpaRepositoryTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.308 s -- in com.docencia.hotel.persistence.jpa.BookingJpaRepositoryTest
