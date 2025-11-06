@@ -1,0 +1,15 @@
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/persistence/jpa/AbstractJpaRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/repository/RoomRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/model/Hotel.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/Application.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/persistence/jpa/BookingJpaRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/persistence/jpa/GuestJpaRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/persistence/jpa/RoomJpaRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/model/Guest.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/persistence/jpa/HotelJpaRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/repository/GuestRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/repository/HotelRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/repository/BookingRepository.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/model/Room.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/domain/model/Booking.java
+/Users/fran/Desktop/springBootCRUD/docencia-notes/src/main/java/com/docencia/hotel/DataLoader.java

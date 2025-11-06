@@ -1,0 +1,4 @@
+com/docencia/hotel/persistence/jpa/BookingJpaRepositoryTest.class
+com/docencia/hotel/persistence/jpa/GuestJpaRepositoryTest.class
+com/docencia/hotel/persistence/jpa/RoomJpaRepositoryTest.class
+com/docencia/hotel/persistence/jpa/HotelJpaRepositoryTest.class

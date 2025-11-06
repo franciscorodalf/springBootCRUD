@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Hotel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">docencia-notes</a> &gt; <a href="index.source.html" class="el_package">com.docencia.hotel.domain.model</a> &gt; <span class="el_source">Hotel.java</span></div><h1>Hotel.java</h1><pre class="source lang-java linenums">package com.docencia.hotel.domain.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import java.util.Objects;
+
+@Entity
+@Table(name = &quot;hotel&quot;)
+public class Hotel {
+
+    @Id
+    private String id;
+
+    @Column(nullable = false)
+    private String nombre;
+
+    @Column(nullable = false)
+    private String direccion;
+
+<span class="pc" id="L26">    @OneToMany(mappedBy = &quot;hotel&quot;)</span>
+    private List&lt;Room&gt; rooms = new ArrayList&lt;&gt;();
+
+<span class="fc" id="L29">    public Hotel() {</span>
+<span class="fc" id="L30">    }</span>
+
+<span class="nc" id="L32">    public Hotel(String id, String nombre, String direccion, List&lt;Room&gt; rooms) {</span>
+<span class="nc" id="L33">        this.id = id;</span>
+<span class="nc" id="L34">        this.nombre = nombre;</span>
+<span class="nc" id="L35">        this.direccion = direccion;</span>
+<span class="nc" id="L36">        this.rooms = rooms;</span>
+<span class="nc" id="L37">    }</span>
+
+<span class="nc" id="L39">    public Hotel(String string, String string2, String string3) {</span>
+        //TODO Auto-generated constructor stub
+<span class="nc" id="L41">    }</span>
+
+    public String getId() {
+<span class="fc" id="L44">        return this.id;</span>
+    }
+
+    public void setId(String id) {
+<span class="fc" id="L48">        this.id = id;</span>
+<span class="fc" id="L49">    }</span>
+
+    public String getNombre() {
+<span class="fc" id="L52">        return this.nombre;</span>
+    }
+
+    public void setNombre(String nombre) {
+<span class="fc" id="L56">        this.nombre = nombre;</span>
+<span class="fc" id="L57">    }</span>
+
+    public String getDireccion() {
+<span class="fc" id="L60">        return this.direccion;</span>
+    }
+
+    public void setDireccion(String direccion) {
+<span class="fc" id="L64">        this.direccion = direccion;</span>
+<span class="fc" id="L65">    }</span>
+
+    public List&lt;Room&gt; getRooms() {
+<span class="nc" id="L68">        return this.rooms;</span>
+    }
+
+    public void setRooms(List&lt;Room&gt; rooms) {
+<span class="nc" id="L72">        this.rooms = rooms;</span>
+<span class="nc" id="L73">    }</span>
+
+    public Hotel id(String id) {
+<span class="nc" id="L76">        setId(id);</span>
+<span class="nc" id="L77">        return this;</span>
+    }
+
+    public Hotel nombre(String nombre) {
+<span class="nc" id="L81">        setNombre(nombre);</span>
+<span class="nc" id="L82">        return this;</span>
+    }
+
+    public Hotel direccion(String direccion) {
+<span class="nc" id="L86">        setDireccion(direccion);</span>
+<span class="nc" id="L87">        return this;</span>
+    }
+
+    public Hotel rooms(List&lt;Room&gt; rooms) {
+<span class="nc" id="L91">        setRooms(rooms);</span>
+<span class="nc" id="L92">        return this;</span>
+    }
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        if (o == this)</span>
+<span class="nc" id="L98">            return true;</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (!(o instanceof Hotel)) {</span>
+<span class="nc" id="L100">            return false;</span>
+        }
+<span class="nc" id="L102">        Hotel hotel = (Hotel) o;</span>
+<span class="nc" id="L103">        return Objects.equals(id, hotel.id);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L108">        return Objects.hash(id);</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L113">        return &quot;{&quot; +</span>
+<span class="nc" id="L114">                &quot; id='&quot; + getId() + &quot;'&quot; +</span>
+<span class="nc" id="L115">                &quot;, nombre='&quot; + getNombre() + &quot;'&quot; +</span>
+<span class="nc" id="L116">                &quot;, direccion='&quot; + getDireccion() + &quot;'&quot; +</span>
+<span class="nc" id="L117">                &quot;, rooms='&quot; + getRooms() + &quot;'&quot; +</span>
+                &quot;}&quot;;
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
