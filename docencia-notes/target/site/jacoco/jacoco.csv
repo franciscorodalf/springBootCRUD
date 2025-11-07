@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+docencia-notes,com.docencia,Application,5,3,0,0,2,1,1,1,1,1
+docencia-notes,com.docencia.hotel.persistence.jpa,AbstractJpaRepository,3,0,0,0,1,0,1,0,1,0
+docencia-notes,com.docencia.hotel,DataLoader,0,106,0,0,0,20,0,2,0,2
+docencia-notes,com.docencia.hotel.domain.model,Guest,4,100,2,2,2,38,2,17,0,17
+docencia-notes,com.docencia.hotel.domain.model,Hotel,18,114,2,2,5,41,4,16,2,16
+docencia-notes,com.docencia.hotel.domain.model,Room,4,146,2,2,2,53,2,23,0,23
+docencia-notes,com.docencia.hotel.domain.model,Booking,4,169,6,8,1,46,6,21,0,20

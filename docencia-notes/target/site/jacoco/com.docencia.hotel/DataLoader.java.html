@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataLoader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">docencia-notes</a> &gt; <a href="index.source.html" class="el_package">com.docencia.hotel</a> &gt; <span class="el_source">DataLoader.java</span></div><h1>DataLoader.java</h1><pre class="source lang-java linenums">package com.docencia.hotel;
+
+import com.docencia.hotel.domain.model.*;
+import com.docencia.hotel.domain.repository.Interface.IBookingJpaRepository;
+import com.docencia.hotel.domain.repository.Interface.IGuestJpaRepository;
+import com.docencia.hotel.domain.repository.Interface.IHotelJpaRepository;
+import com.docencia.hotel.domain.repository.Interface.IRoomJpaRepository;
+
+import jakarta.transaction.Transactional;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+@Component
+public class DataLoader implements CommandLineRunner {
+
+    private final IHotelJpaRepository hotelRepo;
+    private final IRoomJpaRepository roomRepo;
+    private final IGuestJpaRepository guestRepo;
+    private final IBookingJpaRepository bookingRepo;
+
+<span class="fc" id="L24">    public DataLoader(IHotelJpaRepository hotelRepo, IRoomJpaRepository roomRepo,</span>
+            IGuestJpaRepository guestRepo,
+            IBookingJpaRepository bookingRepo) {
+<span class="fc" id="L27">        this.hotelRepo = hotelRepo;</span>
+<span class="fc" id="L28">        this.roomRepo = roomRepo;</span>
+<span class="fc" id="L29">        this.guestRepo = guestRepo;</span>
+<span class="fc" id="L30">        this.bookingRepo = bookingRepo;</span>
+<span class="fc" id="L31">    }</span>
+
+    @Override
+    @Transactional
+    public void run(String... args) {
+<span class="fc" id="L36">        Hotel h = new Hotel(&quot;H1&quot;, &quot;Hotel Atlántico&quot;, &quot;Av. Marítima 9&quot;, new ArrayList&lt;&gt;());</span>
+<span class="fc" id="L37">        hotelRepo.save(h);</span>
+
+<span class="fc" id="L39">        Room r = new Room(&quot;R1&quot;, 101, &quot;Suite&quot;, 95.0, h, new ArrayList&lt;&gt;());</span>
+<span class="fc" id="L40">        roomRepo.save(r);</span>
+
+<span class="fc" id="L42">        Guest g = new Guest(&quot;G1&quot;, &quot;Ana López&quot;, &quot;ana@mail.com&quot;, &quot;600123456&quot;);</span>
+<span class="fc" id="L43">        guestRepo.save(g);</span>
+
+<span class="fc" id="L45">        Booking b = new Booking(&quot;B1&quot;, LocalDate.of(2025, 11, 6),</span>
+<span class="fc" id="L46">                LocalDate.of(2025, 11, 9), r, g);</span>
+<span class="fc" id="L47">        bookingRepo.save(b);</span>
+
+<span class="fc" id="L49">        System.out.println(&quot;Hoteles:&quot;);</span>
+<span class="fc" id="L50">        hotelRepo.findAll().forEach(System.out::println);</span>
+
+<span class="fc" id="L52">        System.out.println(&quot;Habitaciones del hotel H1:&quot;);</span>
+<span class="fc" id="L53">        roomRepo.findByHotelId(&quot;H1&quot;).forEach(System.out::println);</span>
+<span class="fc" id="L54">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
